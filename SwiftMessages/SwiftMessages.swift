@@ -77,12 +77,12 @@ open class SwiftMessages {
          is displayed in the given view controller's view. This option can be used
          for targeted placement in a view controller heirarchy.
         */
-        case viewController(_: UIViewController)
+        case viewController(_: Weak<UIViewController>)
         
         /**
          Displays the message view in the given container view.
          */
-        case view(_: UIView)
+        case view(_: Weak<UIView>)
     }
     
     /**

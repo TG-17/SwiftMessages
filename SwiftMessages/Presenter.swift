@@ -301,10 +301,10 @@ class Presenter: NSObject {
             let viewController = newWindowViewController(level)
             return .viewController(Weak(value: viewController))
         case .viewController(let viewController):
-            let viewController = viewController.sm_selectPresentationContextBottomUp(config)
+            let viewController = viewController.value?.sm_selectPresentationContextBottomUp(config)
             return .viewController(Weak(value: viewController))
         case .view(let view):
-            return .view(Weak(value: view))
+            return .view(view)
         }
     }
 

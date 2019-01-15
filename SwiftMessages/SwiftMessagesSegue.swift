@@ -309,7 +309,7 @@ extension SwiftMessagesSegue {
                 segue.safeAreaWorkaroundViewController.view = segue.presenter.maskingView
             }
             completeTransition = transitionContext.completeTransition
-            let transitionContainer = transitionContext.containerView
+            let transitionContainer = Weak(value: transitionContext.containerView)
             segue.containerView.addSubview(toView)
             // Install the `toView` into the message view.
             switch segue.containment {
