@@ -296,7 +296,7 @@ extension SwiftMessagesSegue {
                 segue.safeAreaWorkaroundViewController.view = segue.presenter.maskingView
             }
             completeTransition = transitionContext.completeTransition
-            let transitionContainer = transitionContext.containerView
+            let transitionContainer = Weak(value: transitionContext.containerView)
             // Setup the layout of the `toView`
             do {
                 toView.translatesAutoresizingMaskIntoConstraints = false
